@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TET Practice App</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📚 TET Practice App</h1>
+    <p>Practice Daily - Learn Daily</p>
+
+    <label>Your Name</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label>Select Subject</label>
+    <select id="subject">
+        <option value="ALL">All Subjects</option>
+        <option value="CDP">Child Development</option>
+        <option value="Tamil">Tamil</option>
+
+<option value="English">English</option>
+
+<option value="Mathematics">Mathematics</option>
+        <option value="EVS">Environmental Studies</option>
+    </select>
+
+    <label>Number of Questions</label>
+    <select id="count">
+        <option>10</option>
+        <option>20</option>
+        <option>30</option>
+        <option>50</option>
+        <option>100</option>
+        <option>150</option>
+    </select>
+
+    <button onclick="startPractice()">
+        Start Practice
+    </button>
+
+</div>
+
+<script src="questionbank.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
