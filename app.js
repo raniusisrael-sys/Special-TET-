@@ -129,22 +129,19 @@ function checkAnswer(){
 
 function nextQuestion(){
 
-current++;
+    current++;
 
-if(current>=practiceQuestions.length){
+    if(current >= practiceQuestions.length){
 
-localStorage.setItem("score", score);
+        localStorage.setItem("score", score);
+        localStorage.setItem("total", practiceQuestions.length);
 
-localStorage.setItem("total", practiceQuestions.length);
+        window.location.href = "result.html";
 
-window.location = "result.html";
+        return;
+    }
 
-return;
-
-}
-
-loadQuestion();
-
+    loadQuestion();
 }
 function startPractice() {
 
