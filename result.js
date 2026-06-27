@@ -1,16 +1,20 @@
-let name = localStorage.getItem("candidate");
+let name = localStorage.getItem("candidate") || "Guest";
 
-let score = Number(localStorage.getItem("score"));
+let score = parseInt(localStorage.getItem("score")) || 0;
 
-let total = Number(localStorage.getItem("total"));
+let total = parseInt(localStorage.getItem("total")) || 0;
 
-document.getElementById("candidate").innerHTML =
+document.getElementById("candidate").textContent =
 "👤 " + name;
 
-document.getElementById("score").innerHTML =
+document.getElementById("score").textContent =
 "Score : " + score + " / " + total;
 
-let percent = Math.round((score / total) * 100);
+let percent = 0;
 
-document.getElementById("percentage").innerHTML =
+if (total > 0) {
+    percent = Math.round((score / total) * 100);
+}
+
+document.getElementById("percentage").textContent =
 "Percentage : " + percent + "%";
