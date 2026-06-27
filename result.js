@@ -1,4 +1,6 @@
-let name = localStorage.getItem("candidate") || "Guest";
+console.log("Candidate:", localStorage.getItem("candidate"));
+console.log("Score:", localStorage.getItem("score"));
+console.log("Total:", localStorage.getItem("total")); let etme = localStorage.getItem("candidate") || "Guest";
 
 let score = parseInt(localStorage.getItem("score")) || 0;
 
